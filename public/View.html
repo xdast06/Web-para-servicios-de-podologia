@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de Paciente</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/img/logo.png">
+</head>
+
+<body>
+    <header class="bg-success text-light py-2">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="/img/logo.png" alt="Logo" style="height: 40px;">
+                </div>
+                <!-- Nombre de la Marca -->
+                <div class="brand-name">
+                    <h1 class="h5 mb-0">Servicios de Podología - Servicios de Podología</h1>
+                </div>
+                <!-- Botones -->
+                <nav>
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="/">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="/podologia/save">Guardar Datos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="/podologia/find">Buscar Datos</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mt-5">
+        <div class="text-center mb-4">
+            <h2 class="text-success">Ficha del Paciente</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="card-header bg-success text-light">
+                        Información Personal
+                    </div>
+                    <div class="card-body">
+                        <dl class="row">
+                            <dt class="col-sm-4 text-success">Nombre:</dt>
+                            <dd class="col-sm-8" id="nombre"></dd>
+
+                            <dt class="col-sm-4 text-success">Apellido:</dt>
+                            <dd class="col-sm-8" id="apellido"></dd>
+
+                            <dt class="col-sm-4 text-success">Edad:</dt>
+                            <dd class="col-sm-8" id="edad"></dd>
+
+                            <dt class="col-sm-4 text-success">Dirección:</dt>
+                            <dd class="col-sm-8" id="direccion"></dd>
+
+                            <dt class="col-sm-4 text-success">Recomendado:</dt>
+                            <dd class="col-sm-8" id="recomendado"></dd>
+
+                            <dt class="col-sm-4 text-success">Nacimiento:</dt>
+                            <dd class="col-sm-8" id="nacimiento"></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="card-header bg-success text-light">
+                        Información de Visita
+                    </div>
+                    <div class="card-body">
+                        <dl class="row">
+                            <dt class="col-sm-4 text-success">Fecha de Visita:</dt>
+                            <dd class="col-sm-8" id="fechaVisita"></dd>
+
+                            <dt class="col-sm-4 text-success">Contacto:</dt>
+                            <dd class="col-sm-8" id="contacto"></dd>
+
+                            <dt class="col-sm-4 text-success">Derivado:</dt>
+                            <dd class="col-sm-8" id="derivado"></dd>
+
+                            <dt class="col-sm-4 text-success">Enfermedad:</dt>
+                            <dd class="col-sm-8" id="enfermedad"></dd>
+
+                            <dt class="col-sm-4 text-success">Medicación Actual:</dt>
+                            <dd class="col-sm-8" id="medicacionActual"></dd>
+
+                            <dt class="col-sm-4 text-success">Tratamiento:</dt>
+                            <dd class="col-sm-8" id="tratamiento"></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3 class="text-success mb-3">Detalles Adicionales</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="card-header bg-success text-light">
+                        Historia Clínica
+                    </div>
+                    <div class="card-body">
+                        <dl class="row">
+                            <dt class="col-sm-4 text-success">Antitetánica:</dt>
+                            <dd class="col-sm-8" id="antitetanica"></dd>
+
+                            <dt class="col-sm-4 text-success">Presión:</dt>
+                            <dd class="col-sm-8" id="presion"></dd>
+
+                            <dt class="col-sm-4 text-success">Diabético:</dt>
+                            <dd class="col-sm-8" id="diabetico"></dd>
+
+                            <dt class="col-sm-4 text-success">Discrasías:</dt>
+                            <dd class="col-sm-8" id="discrasias"></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="card-header bg-success text-light">
+                        Evaluación de Piel
+                    </div>
+                    <div class="card-body">
+                        <dl class="row">
+                            <dt class="col-sm-4 text-success">Piel:</dt>
+                            <dd class="col-sm-8" id="piel"></dd>
+
+                            <dt class="col-sm-4 text-success">Cianosis:</dt>
+                            <dd class="col-sm-8" id="cianosis"></dd>
+
+                            <dt class="col-sm-4 text-success">Turgencia:</dt>
+                            <dd class="col-sm-8" id="turgencia"></dd>
+
+                            <dt class="col-sm-4 text-success">Pie:</dt>
+                            <dd class="col-sm-8" id="pie"></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3 class="text-success mb-3">Notas</h3>
+        <div class="card">
+            <div class="card-header bg-success text-light">
+                Notas
+            </div>
+            <div class="card-body">
+                <p id="notas">Notas del paciente aquí.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Obtén el ID del paciente de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const patientId = urlParams.get('id');
+
+        if (patientId) {
+            // Realiza una solicitud para obtener los datos del paciente
+            fetch(`/podologia/getPatient/${patientId}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Error en la solicitud: ' + response.statusText);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (Array.isArray(data) && data.length > 0) {
+                        // Accede al primer elemento del array
+                        const patient = data[0];
+
+                        // Llena los campos con los datos del paciente
+                        document.getElementById('nombre').textContent = patient.nombre || 'No disponible';
+                        document.getElementById('apellido').textContent = patient.apellido || 'No disponible';
+                        document.getElementById('edad').textContent = patient.edad || 'No disponible';
+                        document.getElementById('direccion').textContent = patient.direccion || 'No disponible';
+                        document.getElementById('recomendado').textContent = patient.recomendado || 'No disponible';
+                        document.getElementById('nacimiento').textContent = formatDate(patient.nacimiento) || 'No disponible';
+                        document.getElementById('fechaVisita').textContent = formatDate(patient.fechaVisita) || 'No disponible';
+                        document.getElementById('contacto').textContent = patient.contacto || 'No disponible';
+                        document.getElementById('derivado').textContent = patient.derivado || 'No disponible';
+                        document.getElementById('enfermedad').textContent = patient.enfermedad || 'No disponible';
+                        document.getElementById('medicacionActual').textContent = patient.medicacionActual || 'No disponible';
+                        document.getElementById('tratamiento').textContent = patient.tratamiento || 'No disponible';
+                        document.getElementById('antitetanica').textContent = patient.antitetanica || 'No disponible';
+                        document.getElementById('presion').textContent = patient.presion || 'No disponible';
+                        document.getElementById('diabetico').textContent = patient.diabetico || 'No disponible';
+                        document.getElementById('discrasias').textContent = patient.discracias || 'No disponible';
+                        document.getElementById('piel').textContent = patient.piel || 'No disponible';
+                        document.getElementById('cianosis').textContent = patient.cianosis || 'No disponible';
+                        document.getElementById('turgencia').textContent = patient.turgencia || 'No disponible';
+                        document.getElementById('pie').textContent = patient.pie || 'No disponible';
+                        document.getElementById('notas').textContent = patient.notas || 'No disponible';
+                    } else {
+                        document.querySelector('.container').innerHTML = '<p>No se encontraron datos del paciente.</p>';
+                    }
+                })
+                .catch(error => console.error('Error al cargar los datos del paciente:', error));
+        }
+
+        // Función para formatear fechas (opcional)
+        function formatDate(dateString) {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            return new Date(dateString).toLocaleDateString(undefined, options);
+        }
+    </script>
+</body>
+
+</html>

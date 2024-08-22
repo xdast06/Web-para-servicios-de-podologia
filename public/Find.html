@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Datos - Servicios de Podología</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="icon" type="image/png" href="/img/logo.png">
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        .content {
+            min-height: 100%;
+            margin-bottom: -60px;
+            /* Ajusta según la altura de tu footer */
+        }
+
+        .footer {
+            height: 60px;
+            /* Ajusta según la altura de tu footer */
+            line-height: 60px;
+            /* Centra el texto verticalmente */
+            background-color: #f1f1f1;
+        }
+
+        .results-table {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="bg-success text-light py-2">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="/img/logo.png" alt="Logo" style="height: 40px;">
+                </div>
+                <!-- Nombre de la Marca -->
+                <div class="brand-name">
+                    <h1 class="h5 mb-0">Servicios de podologia</h1>
+                </div>
+                <!-- Botones -->
+                <nav>
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="/">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="/podologia/save">Guardar Datos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="/podologia/find">Buscar Datos</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mt-5 content">
+        <h2>Buscar Datos</h2>
+        <form action="/podologia/find" method="get">
+            <div class="form-row">
+                <div class="form-group col-md-8">
+                    <label for="searchQuery">Buscar por Nombre</label>
+                    <input type="text" class="form-control" id="searchQuery" name="query"
+                        placeholder="Ingrese el nombre">
+                </div>
+                <div class="form-group col-md-4 d-flex align-items-end">
+                    <button type="submit" class="btn btn-primary">Buscar</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Resultados de búsqueda -->
+        <div id="results-container" class="results-table mt-4">
+        </div>
+    </div>
+
+
+
+    <script src="/js/find.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

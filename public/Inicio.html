@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Servicios de Podología</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="icon" type="image/png" href="/img/logo.png">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="bg-success text-light py-2">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="/img/logo.png" alt="Logo" style="height: 40px;">
+                </div>
+                <!-- Nombre de la Marca -->
+                <div class="brand-name">
+                    <h1 class="h5 mb-0">Servicios de podologia</h1>
+                </div>
+                <!-- Botones -->
+                <nav>
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="/">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="/podologia/save">Guardar Datos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="/podologia/find">Buscar Datos</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Estadísticas</h5>
+                        <p class="card-text" id="total">Pacientes: 150</p>
+                        <p class="card-text" id="hoy">Pacientes hoy: 20</p>
+                        <!-- Más estadísticas -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Acciones Rápidas</h5>
+                        <button class="btn btn-primary">Proximamente</button>
+                        <button class="btn btn-primary">Proximamente</button>
+                        <!-- Más acciones -->
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Recientes</h5>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Fecha</th>
+                                    <th>Enfermedad Base</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Filas de datos recientes -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

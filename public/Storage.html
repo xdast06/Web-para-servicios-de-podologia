@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha podologica - Servicios de Podología</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="icon" type="image/png" href="/img/logo.png">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="bg-success text-light py-2">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="/img/logo.png" alt="Logo" style="height: 40px;">
+                </div>
+                <!-- Nombre de la Marca -->
+                <div class="brand-name">
+                    <h1 class="h5 mb-0">Servicios de podologia</h1>
+                </div>
+                <!-- Botones -->
+                <nav>
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="/">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="/podologia/save">Guardar Datos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="/podologia/find">Buscar Datos</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mt-5">
+        <h2>Ficha Podologica</h2>
+        <form action="/podologia/postData" method="post">
+            <!-- Fila 1: Apellido y Nombre -->
+            <div class="form-row border-bottom">
+                <div class="form-group col-md-6">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" name="apellido" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
+            </div>
+
+            <!-- Fila 2: Edad, Dirección y Fecha de Nacimiento -->
+            <div class="form-row border-bottom">
+                <div class="form-group col-md-4">
+                    <label for="edad">Edad</label>
+                    <input type="number" class="form-control" id="edad" name="edad" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="direccion">Dirección</label>
+                    <input type="text" class="form-control" id="direccion" name="direccion" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+                    <input type="date" class="form-control" id="fecha_nacimiento" name="nacimiento" required>
+                </div>
+            </div>
+
+            <!-- Fila 3: Teléfono, Primera Vista y Recomendado por -->
+            <div class="form-row border-bottom">
+                <div class="form-group col-md-4">
+                    <label for="telefono">Teléfono/Celular</label>
+                    <input type="tel" class="form-control" id="telefono" name="contacto" pattern="\d{10}" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="primera_vista">Fecha de Vista</label>
+                    <input type="date" class="form-control" id="primera_vista" name="fechaVisita" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="recomendado_por">Recomendado por</label>
+                    <input type="text" class="form-control" id="recomendado_por" name="recomendado">
+                </div>
+            </div>
+
+            <!-- Fila 4: Derivado por, Enfermedad Base y Medicación -->
+            <div class="form-row border-bottom">
+                <div class="form-group col-md-3">
+                    <label for="derivado_por">Derivado por</label>
+                    <input type="text" class="form-control" id="derivado_por" name="derivado">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="enfermedad_base">Enfermedad Base</label>
+                    <input type="text" class="form-control" id="enfermedad_base" name="enfermedad">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="tratamiento">Tratamiento</label>
+                    <input type="text" class="form-control" id="tratamiento" name="tratamiento">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="medicacion">Medicación que toma</label>
+                    <input type="text" class="form-control" id="medicacion" name="medicacionActual">
+                </div>
+            </div>
+
+            <!-- Fila 5: Estado de Salud -->
+            <div class="form-row border-bottom">
+                <div class="form-group col-md-3">
+                    <label>Vacuna Antitetánica</label>
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="vacuna_si" name="antitetanica" value="S">
+                            <label class="form-check-label" for="vacuna_si">Sí</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="vacuna_no" name="antitetanica" value="N">
+                            <label class="form-check-label" for="vacuna_no">No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-3">
+                    <label>Presión Arterial</label>
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="hipotenso" name="presion"
+                                value="hipotenso">
+                            <label class="form-check-label" for="hipotenso">Hipotenso</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="normal" name="presion" value="normal">
+                            <label class="form-check-label" for="normal">Normal</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="hipertenso" name="presion"
+                                value="hipertenso">
+                            <label class="form-check-label" for="hipertenso">Hipertenso</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-3">
+                    <label>Diabético</label>
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="diabetico_si" name="diabetico" value="S">
+                            <label class="form-check-label" for="diabetico_si">Sí</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="diabetico_no" name="diabetico" value="N">
+                            <label class="form-check-label" for="diabetico_no">No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-3">
+                    <label>Discrepancias Sanguíneas</label>
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="hemofilia" name="discracias"
+                                value="hemofilia">
+                            <label class="form-check-label" for="hemofilia">Hemofilia</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="anticuagulado" name="discracias"
+                                value="anticuagulado">
+                            <label class="form-check-label" for="anticuagulado">Anticuagulado</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row border-bottom">
+                <div class="form-group col-md-3">
+                    <label>Valoración de la Piel</label>
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="piel_normal" name="piel" value="normal">
+                            <label class="form-check-label" for="piel_normal">Normal</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="piel_palidez" name="piel" value="palidez">
+                            <label class="form-check-label" for="piel_palidez">Palidez</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-3">
+                    <label>Cianosis</label>
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="cianosis_si" name="cianosis" value="S">
+                            <label class="form-check-label" for="cianosis_si">Sí</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="cianosis_no" name="cianosis" value="N">
+                            <label class="form-check-label" for="cianosis_no">No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-3">
+                    <label>Turgencia</label>
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="turgencia_normal" name="turgencia"
+                                value="normal">
+                            <label class="form-check-label" for="turgencia_normal">Normal</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="turgencia_disminuida" name="turgencia"
+                                value="disminuida">
+                            <label class="form-check-label" for="turgencia_disminuida">Disminuida</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-3">
+                    <label>Pie</label>
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="pie_frio" name="pie" value="frio">
+                            <label class="form-check-label" for="pie_frio">Frío</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="pie_caliente" name="pie"
+                                value="caliente">
+                            <label class="form-check-label" for="pie_caliente">Caliente</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="pie_resequedad" name="pie"
+                                value="resequedad">
+                            <label class="form-check-label" for="pie_resequedad">Resequedad</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="pie_humedad" name="pie" value="humedad">
+                            <label class="form-check-label" for="pie_humedad">Humedad</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="pie_intertrigo" name="pie"
+                                value="intertrigo">
+                            <label class="form-check-label" for="pie_intertrigo">Intertrigo</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fila 6: Notas Adicionales -->
+            <div class="form-row border-bottom">
+                <div class="form-group col-md-12">
+                    <label for="notas">Notas Adicionales</label>
+                    <textarea class="form-control" id="notas" name="notas" rows="3"></textarea>
+                </div>
+            </div>
+
+            <!-- Botones -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary mr-2">Guardar</button>
+                <button type="reset" class="btn btn-danger">Resetear</button>
+            </div>
+        </form>
+    </div>
+
+    <footer class="footer text-center mt-5">
+        <p class="footer-text">Copyright © 2024</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

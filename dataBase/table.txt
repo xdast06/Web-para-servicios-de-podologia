@@ -1,0 +1,28 @@
+CREATE TABLE pacientes (
+    id int AUTO_INCREMENT,
+    nombre varchar(50),
+    apellido varchar(50),
+    edad int,
+    direccion varchar(80),
+    recomendado varchar(80),
+    nacimiento date,
+    fechaVisita date,
+    contacto varchar(20),
+    derivado varchar(80),
+    enfermedad varchar(200),
+    medicacionActual varchar(100),
+    tratamiento varchar(200),
+    
+    antitetanica ENUM('S', 'N'),
+    presion varchar(10),
+    diabetico ENUM('S', 'N'),
+    discracias varchar(13),
+    piel varchar(7),
+    cianosis ENUM('S', 'N'),
+    turgencia varchar(10),
+    pie varchar(50),
+    notas varchar(255),
+    activo boolean,
+    
+    CONSTRAINT pk_id PRIMARY KEY(id)
+);
